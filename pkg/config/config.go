@@ -98,6 +98,7 @@ type (
 		AWS     *AWSConfig     `yaml:"aws"`
 		Hetzner *HetznerConfig `yaml:"hetzner"`
 		Azure   *AzureConfig   `yaml:"azure"`
+		Local   *LocalConfig   `yaml:"local"`
 	}
 
 	SSHKeyPairConfig struct {
@@ -239,6 +240,11 @@ type (
 // Azure specific.
 type (
 	AzureConfig struct{}
+)
+
+// Local specific.
+type (
+	LocalConfig struct{}
 )
 
 var ParsedConfig = &Config{}
